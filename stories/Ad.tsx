@@ -12,7 +12,7 @@ interface AdProps {
 }
 
 export const Ad = ({ id, adUnit, sizes, sizeMapping }: AdProps) => {
-    const { transitioning, loadAds } = useAdsContext()
+    const { transitioning, loadAds, googletag } = useAdsContext()
 
     useEffect(() => {
         if (transitioning) return

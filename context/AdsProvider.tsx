@@ -13,6 +13,7 @@ const AdsContext = React.createContext({
             sizes: googletag.GeneralSize
         }[]
     ) => {},
+	googletag: null as googletag.Googletag | null,
 })
 
 export default function AdsProvider({ children }: { children: ReactNode }) {
@@ -97,7 +98,7 @@ export default function AdsProvider({ children }: { children: ReactNode }) {
     }
 
     return (
-        <AdsContext.Provider value={{ transitioning, loadAds }}>
+        <AdsContext.Provider value={{ transitioning, loadAds, googletag }}>
             {children}
         </AdsContext.Provider>
     )
