@@ -1,0 +1,7 @@
+{
+    "prettier.eslintIntegration": true,
+    "eslint.codeAction.showDocumentation": {
+        "enable": false
+    },
+    "editor.defaultFormatter": "svipas.prettier-plus"
+}
