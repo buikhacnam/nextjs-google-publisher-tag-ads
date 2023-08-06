@@ -18,7 +18,8 @@ export const Ad = ({ id, adUnit, sizes, sizeMapping }: AdProps) => {
         if (transitioning) return
 
         loadAds(id, adUnit, sizes, sizeMapping)
-    }, [transitioning, loadAds, id, adUnit, sizes, sizeMapping])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [transitioning, loadAds, id, adUnit, sizes, sizeMapping, googletag])
 
     return <div id={id} data-cy="Ad"/>
 }
